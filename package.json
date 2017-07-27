@@ -2,7 +2,9 @@
   "name": "04-webpack-react-hmr",
   "version": "1.0.0",
   "license": "MIT",
-  "browserslist": ["> 1%"],
+  "browserslist": [
+    "> 1%"
+  ],
   "scripts": {
     "start": "yarn dev:start",
     "dev:start": "nodemon -e js,jsx --ignore lib --ignore dist --exec babel-node src/server",
@@ -15,15 +17,20 @@
     "test-fix": "eslint src --fix",
     "precommit": "yarn test",
     "prepush": "yarn test && yarn prod:build",
-    "test-watch": "nodemon --watch . --watch test --exec yarn test"
+    "test-watch": "nodemon --watch . --watch test --exec yarn test",
+    "lint-watch": "nodemon --watch . --watch src --exec eslint src webpack.config.babel.js --ext .js,.jsx"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "compression": "^1.6.2",
     "express": "^4.15.3",
+    "immutable": "4.0.0-rc.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-hot-loader": "next"
+    "react-hot-loader": "next",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.2.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
