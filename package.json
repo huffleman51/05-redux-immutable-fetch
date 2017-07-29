@@ -17,8 +17,8 @@
     "test-fix": "eslint src webpack.config.babel.js --ext .js,.jsx --fix",
     "precommit": "yarn test",
     "prepush": "yarn test && yarn prod:build",
-    "test-watch": "nodemon --watch . --watch test --exec yarn test",
-    "lint-watch": "nodemon --watch . --watch test --exec eslint src webpack.config.babel.js --ext .js,.jsx"
+    "test-watch": "nodemon --watch . --watch src --ext js,jsx,json --exec yarn test",
+    "lint-watch": "nodemon --watch . --watch src --ext js,jsx,json --exec yarn lint"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
