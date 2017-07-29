@@ -1,5 +1,5 @@
 {
-  "name": "04-webpack-react-hmr",
+  "name": "05-redux-immutable-fetch",
   "version": "1.0.0",
   "license": "MIT",
   "browserslist": [
@@ -13,12 +13,12 @@
     "prod:start": "cross-env NODE_ENV=production pm2 start lib/server && pm2 logs",
     "prod:stop": "pm2 delete server",
     "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
-    "test": "eslint src && flow && jest --coverage",
-    "test-fix": "eslint src --fix",
+    "test": "flow && jest --coverage && eslint src webpack.config.babel.js --ext .js,.jsx",
+    "test-fix": "eslint src webpack.config.babel.js --ext .js,.jsx --fix",
     "precommit": "yarn test",
     "prepush": "yarn test && yarn prod:build",
     "test-watch": "nodemon --watch . --watch test --exec yarn test",
-    "lint-watch": "nodemon --watch . --watch src --exec eslint src webpack.config.babel.js --ext .js,.jsx"
+    "lint-watch": "nodemon --watch . --watch test --exec eslint src webpack.config.babel.js --ext .js,.jsx"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
