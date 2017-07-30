@@ -13,7 +13,7 @@
     "prod:start": "cross-env NODE_ENV=production pm2 start lib/server && pm2 logs",
     "prod:stop": "pm2 delete server",
     "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
-    "test": "flow && jest --coverage && eslint src webpack.config.babel.js --ext .js,.jsx",
+    "test": "flow version && flow && jest --coverage && eslint src webpack.config.babel.js --ext .js,.jsx",
     "test-fix": "eslint src webpack.config.babel.js --ext .js,.jsx --fix",
     "precommit": "yarn test",
     "prepush": "yarn test && yarn prod:build",
@@ -25,12 +25,14 @@
     "compression": "^1.6.2",
     "express": "^4.15.3",
     "immutable": "4.0.0-rc.2",
+    "isomorphic-fetch": "^2.2.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-hot-loader": "next",
     "react-redux": "^5.0.5",
     "redux": "^3.7.2",
-    "redux-actions": "^2.2.1"
+    "redux-actions": "^2.2.1",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
