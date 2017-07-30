@@ -3,13 +3,19 @@ Tutorial that I followed is [here](https://github.com/huffleman51/js-stack-from-
 # What I learned in this module
 
 1. ImmutableJS (or just Immutable) is a library by Facebook to manipulate immutable collections, like lists and maps. Any change made on an immutable object returns a new object without mutating the original object. This approach follows the functional programming paradigm, which works really well with Redux.
-  * const obj = Immutable.Map({ a: 1 })
-  * obj.set('a', 2) // Returns a new object without mutating `obj`
+```javascript
+   const immutablePerson = Immutable.fromJS({
+      name: 'Stan',
+      friends: ['Kyle', 'Cartman', 'Kenny'],
+    }) 
+```
 1. When creating immutable collections, a very convenient method is Immutable.fromJS(), which takes any regular JS object or array and returns a deeply immutable version of it.
-  * const immutablePerson = Immutable.fromJS({
-  *    name: 'Stan',
-  *    friends: ['Kyle', 'Cartman', 'Kenny'],
-  *  })
+```javascript
+  const immutablePerson = Immutable.fromJS({
+      name: 'Stan',
+      friends: ['Kyle', 'Cartman', 'Kenny'],
+    })
+```
 1. Redux is a library to handle the lifecycle of your application. It creates a store, which is the single source of truth of the state of your app at any given time.
 1. react-redux connects a Redux store with React components. With react-redux, when the Redux store changes, React components get automatically updated. They can also fire Redux actions.
 1. Components are dumb React components, in a sense that they don't know anything about the Redux state. They are logic-less, and just show whatever they are asked to show via React props.
