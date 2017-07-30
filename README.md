@@ -1,4 +1,4 @@
-Tutorial that I followed is [here](https://github.com/huffleman51/js-stack-from-scratch/blob/master/tutorial/05-redux-immutable-fetch.md#readme).
+Tutorial that I followed is [here](https://github.com/verekia/js-stack-from-scratch/blob/master/tutorial/05-redux-immutable-fetch.md#readme).
 
 # What I learned in this module
 
